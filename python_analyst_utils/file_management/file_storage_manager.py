@@ -193,14 +193,3 @@ class FileStorageManager:
             
 
 
-if __name__ == "__main__":
-    # Create an instance of FileStorageManager
-    fsm = FileStorageManager()
-
-    # Define the project root directory
-    project_root = r"C:\Users\Arosh\Documents\GitHub\python-analyst-utility"
-
-    # Print the folder structure while ignoring the 'venv' folder
-    print("Project Folder Structure:")
-    fsm.print_folder_structure(root_dir=project_root, ignore_dirs=["venv", ".pytest_cache", ".git"])
-        
