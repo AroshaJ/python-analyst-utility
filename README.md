@@ -1,87 +1,98 @@
-# python-analyst-utility
+# Python Analyst Utilities
 
-A Python package providing streamlined tools for analysts, including Pandas wrappers, Excel and CSV helpers, and file management utilities. Simplify common tasks and boost productivity with this all-in-one utility package.
+[![PyPI version](https://badge.fury.io/py/python-analyst-utility.svg)](https://badge.fury.io/py/python-analyst-utility)  
+**Python Analyst Utilities** is a powerful and user-friendly Python library designed to streamline data workflows for analysts, data scientists, and developers. It offers utilities for working with Excel, CSV files, file management, pandas DataFrames, and more. 
 
-## Features
+---
 
-- 📊 Enhanced Pandas functionality with intuitive wrappers
-- 📑 Simplified Excel and CSV file handling
-- 🗂️ File management utilities for common analyst tasks
-- ⚡ Performance-optimized data operations
-- 🔧 Easy-to-use API for common data analysis tasks
+## Key Features
+
+1. **Excel Helper**: Simplifies reading, writing, and managing Excel files.
+2. **CSV Helper**: Provides robust tools for handling CSV data with pandas integration.
+3. **File Storage Manager**: Dynamic file and folder management with system directory detection.
+4. **Date Format Detector**: Automatically detects date formats in strings or lists.
+5. **Pandas Transformation Helper**: A comprehensive utility for cleaning, transforming, and merging pandas DataFrames.
+
+---
+
+## Documentation
+
+Comprehensive documentation, including detailed examples and API references, is available at:
+
+[Python Analyst Utilities Documentation](https://aroshaj.github.io/python-analyst-utility)
+
+---
 
 ## Installation
 
-Install using pip:
+Install the package directly from PyPI:
 
 ```bash
 pip install python-analyst-utility
 ```
 
+---
+
 ## Quick Start
 
-```python
-from python_analyst_utils import excel, pandas_helper
+Here are a few examples to help you get started:
 
-# Example: Reading an Excel file with enhanced features
-df = excel.read_excel("data.xlsx", sheet_name="Sheet1")
-
-# Example: Using pandas helper functions
-cleaned_df = pandas_helper.clean_column_names(df)
-```
-
-## Documentation
-
-### Excel Module
+### Example 1: Loading and Cleaning a CSV File
 
 ```python
-# Read Excel files with additional options
-excel.read_excel(filename, sheet_name="Sheet1", headers=True)
-# Write to Excel with formatting
-excel.write_excel(df, filename, sheet_name="Output")
+from python_analyst_utils.csv_management.csv_helper import CsvSourceHelper
+from python_analyst_utils.pandas_management.pandas_transformation_helper import PandasTransformationHelper
+import pandas as pd
+
+# Initialize helpers
+csv_helper = CsvSourceHelper()
+transformation_helper = PandasTransformationHelper()
+
+# Load a CSV file into a pandas DataFrame
+file_path = "data/sample.csv"
+data = csv_helper.get_dataframe_from_csv(file_path)
+
+# Clean the data: trim whitespace and handle NaNs
+data = transformation_helper.trim_values_in_columns(data, ["Name", "Address"])
+data = transformation_helper.replace_nas_with_zeros(data, "Salary")
+
+# Print cleaned data
+print(data.head())
 ```
 
-### Pandas Helper Module
+### Example 2: Managing Files and Directories
 
 ```python
-# Clean column names
-pandas_helper.clean_column_names(df)
-# Quick data quality check
-pandas_helper.check_data_quality(df)
+from python_analyst_utils.file_management.file_storage_manager import FileStorageManager
+
+# Initialize the file manager
+manager = FileStorageManager()
+
+# Create a folder and check if it exists
+folder_path = "data/new_folder"
+manager.create_folder_if_doesnt_exist(folder_path)
+folder_exists = manager.does_folder_exist(folder_path)
+print(f"Folder exists: {folder_exists}")
 ```
 
-## Building The Package
-
-Build the package using:
-
-```bash
-python setup.py sdist bdist_wheel
-```
+---
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions! Whether it’s fixing a bug, adding a new feature, or improving documentation, your input is valuable.  
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- **Repository**: [GitHub](https://github.com/AroshaJ/python-analyst-utility)  
+- **Issues**: [Report or Suggest](https://github.com/AroshaJ/python-analyst-utility/issues)
+
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support, please open an issue in the GitHub repository.
-
-## Changelog
-
-### Version 1.0.0
-- Initial release
-- Basic Excel and CSV functionality
-- Pandas helper functions
-- File management utilities
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
+
+## Acknowledgements
+
+Special thanks to all contributors and users who have helped shape **Python Analyst Utilities**. Your support and feedback are instrumental to its success.
+

@@ -2,24 +2,71 @@ site_name: Python Analyst Utility
 site_description: A utility package for analysts with Pandas, Excel, CSV helpers, and more.
 site_author: Rosh Jayawardena
 site_url: https://AroshaJ.github.io/python-analyst-utility
+repo_url: https://github.com/AroshaJ/python-analyst-utility
+repo_name: aroshaj/python-analyst-utility
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - header.autohide
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.tabs
 
 nav:
   - Home: index.md
   - Module Reference:
       - Pandas Transformation Helper: reference/pandas_transformation_helper.md
+      - Excel Helper: reference/excel_helper.md
+      - CSV Helper: reference/csv_helper.md
+      - File Helper: reference/file_helper.md
+      - Date Helper: reference/date_manager.md
+  - Examples:
+      - Jupyter Example: examples/jupyter_analysis_example.md
   - About: about.md
 
 plugins:
   - search
   - autorefs
+  - tags
   - mkdocstrings:
       handlers:
         python:
           options:
             paths: ["python_analyst_utils"]  # Path to your source code
             separate_signature: true
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 markdown_extensions:
   - codehilite
