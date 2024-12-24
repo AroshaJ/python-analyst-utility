@@ -6,7 +6,7 @@ def read_requirements():
         return f.read().splitlines()
 
 setup(
-    name="python-analyst-utils",  # Replace with your package name
+    name="python-analyst-utility", 
     version="0.1.0",
     author="Rosh Jayawardena",
     author_email="rosh.jayawardena@gmail.com",
