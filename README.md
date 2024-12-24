@@ -21,7 +21,7 @@ pip install python-analyst-utility
 ## Quick Start
 
 ```python
-from analyst_utility import excel, pandas_helper
+from python_analyst_utils import excel, pandas_helper
 
 # Example: Reading an Excel file with enhanced features
 df = excel.read_excel("data.xlsx", sheet_name="Sheet1")

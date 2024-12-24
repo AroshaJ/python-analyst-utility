@@ -1,0 +1,34 @@
+site_name: Python Analyst Utility
+site_description: A utility package for analysts with Pandas, Excel, CSV helpers, and more.
+site_author: Rosh Jayawardena
+site_url: https://AroshaJ.github.io/python-analyst-utility
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Module Reference:
+      - Pandas Transformation Helper: reference/pandas_transformation_helper.md
+  - About: about.md
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            paths: ["python_analyst_utils"]  # Path to your source code
+            separate_signature: true
+
+markdown_extensions:
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+
+extra_css:
+  - stylesheets/custom.css  # Optional custom styles
+

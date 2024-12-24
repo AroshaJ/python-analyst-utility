@@ -1,0 +1,26 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust if your default branch is not `main`
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs-material mkdocstrings[python]
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
