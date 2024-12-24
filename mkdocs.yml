@@ -39,13 +39,25 @@ theme:
 nav:
   - Home: index.md
   - Module Reference:
+      - Overview: reference/index.md
+      - Installation: reference/installation.md
       - Pandas Transformation Helper: reference/pandas_transformation_helper.md
       - Excel Helper: reference/excel_helper.md
       - CSV Helper: reference/csv_helper.md
       - File Helper: reference/file_helper.md
       - Date Helper: reference/date_manager.md
   - Examples:
+      - Overview: examples/index.md
       - Jupyter Example: examples/jupyter_analysis_example.md
+      - Combine CSV and Excel: examples/combine_csv_and_excel_data.md
+      - Automated Weekly Report Generation: examples/automated_weekly_report_generation.md
+      - Data Quality Assessment: examples/data_quality_assessment.md
+      - Standardising Date Formats Across Datasets: examples/standardising_date_formats.md
+      - Folder Organisation and File Archiving: examples/folder_organisation_and_file_archiving.md
+      - Building a Summary Table from Multiple Excel Sheets: examples/building_summary_table_from_multiple_excel_sheets.md
+      - Appending New Data to an Existing Dataset: examples/appending_new_data_to_existing_dataset.md
+      - Generating an Analytics Dashboard Base Dataset: examples/generating_analytics_dashboard_base_dataset.md
+      - Validating and Cleaning User-Uploaded Files: examples/validating_and_cleaning_user_uploaded_files.md
   - About: about.md
 
 plugins:
