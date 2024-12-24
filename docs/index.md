@@ -7,19 +7,23 @@
 ## Key Features
 
 ### 📊 Excel and CSV Utilities
+
 - **Excel Helper**: Simplify reading, writing, and manipulating Excel files.
 - **CSV Helper**: Effortlessly load and store pandas DataFrames in CSV format, with support for storing directly in user-defined directories like the Downloads folder.
 
 ### 📂 File Management
+
 - **File Storage Manager**: Manage file paths, create directories, and clear folder contents. Includes utilities to normalise paths, explore directory structures, and dynamically retrieve system folders like Documents and Downloads.
 
 ### 🔄 Data Transformation
+
 - **Pandas Transformation Helper**: A powerful suite of tools for DataFrame transformations, including:
   - Column renaming, reordering, and type conversions.
   - Advanced cleaning utilities for removing duplicates, handling NaNs, and standardising content.
   - Sophisticated merging and appending methods for integrating multiple datasets.
 
 ### 📆 Date Format Detection
+
 - **Date Format Detector**: Automatically identify date formats in strings or lists, making it easy to validate and standardise date data.
 
 ---
@@ -43,28 +47,34 @@ Install the package with pip:
 pip install python-analyst-utility
 ```
 
+You can also find the library on [PyPI here](https://pypi.org/project/python-analyst-utility/).
+
 ---
 
 ## Utilities Overview
 
 ### 1. **Excel Helper**
 Effortlessly manage Excel files with utilities to:
+
 - Open, save, and refresh workbooks.
 - Extract data into pandas DataFrames or from specific cells/ranges.
 
 ### 2. **CSV Helper**
 Simplify operations on CSV files:
+
 - Load CSVs into pandas DataFrames with robust error handling.
 - Store DataFrames to user-defined paths or the Downloads folder.
 
 ### 3. **File Storage Manager**
 Comprehensive file management utilities:
+
 - Create folders and clear their contents.
 - Dynamically locate system folders like Documents and Downloads.
 - Print directory structures and normalise file paths for cross-platform compatibility.
 
 ### 4. **Pandas Transformation Helper**
 A versatile utility for pandas DataFrame transformations:
+
 - Perform diagnostic operations like retrieving column lists and printing metadata.
 - Transform DataFrames by renaming, reordering, and converting column types.
 - Clean and prepare data with methods to handle NaNs, duplicates, and formatting inconsistencies.
@@ -72,6 +82,7 @@ A versatile utility for pandas DataFrame transformations:
 
 ### 5. **Date Format Detector**
 Validate and standardise date strings:
+
 - Automatically detect date formats in individual strings or lists.
 - Support for a wide range of common date and time patterns.
 
@@ -133,15 +144,18 @@ print(f"Detected format: {format_detected}")
 ## Comprehensive Documentation
 
 Explore the full functionality of **Python Analyst Utilities**:
-- [Installation and Setup](installation.md)
-- [API Reference](reference.md)
-- [Examples and Tutorials](examples.md)
+
+- [Installation and Setup](reference/installation.md)
+- [API Reference](reference/index.md)
+- [Examples and Tutorials](examples/index.md)
 
 ---
 
 ## Get in Touch
 
 Have questions, feedback, or suggestions? Feel free to reach out:
+
 - [GitHub Repository](https://github.com/AroshaJ/python-analyst-utility)
 - [Submit an Issue](https://github.com/AroshaJ/python-analyst-utility/issues)
+- [PyPI package](https://pypi.org/project/python-analyst-utility/).
 
