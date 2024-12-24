@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="python-analyst-utility",
-    version="0.1.0.1",
+    version="0.1.6",
     author="Rosh Jayawardena",
     author_email="rosh.jayawardena@gmail.com",
     description="A utility package for analysts with Pandas, Excel, CSV helpers and more.",
